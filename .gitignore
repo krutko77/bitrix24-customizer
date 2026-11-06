@@ -6,5 +6,8 @@ data/
 .claude/skills/
 .claude/settings.local.json
 
+# Локальные данные доступа (адреса серверов и т. п.); репозиторий публичный
+docs/local-private.md
+
 # Зеркало REST-документации (восстанавливается scripts/sync-rest-docs.sh)
 docs/knowledge/rest-docs/
