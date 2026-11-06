@@ -38,7 +38,7 @@
 
 ## Замечания
 - Проект создан копированием структуры агента FZ-87. Всё специфичное для FZ-87 удалено 2026-11-06 по просьбе сотрудника: юридический блок в `CLAUDE.md`, материалы по 87-ФЗ, код дашборда `src/`, `package.json`, `deploy-vps.sh`, `.env.example`, `.portal-meta.json`. Оставлена рабочая инфраструктура: `CLAUDE.md`, `.claude/` (команды и навыки), `scripts/snapshot.sh`, `README.md` (только заголовок). Кода приложения в проекте сейчас нет.
-- Git инициализирован 2026-11-06 (ветка `main`), `origin` = https://github.com/krutko77/bitrix24-customizer.git (**публичный**, пустой). Коммитов и push пока не было. ⚠ `scripts/snapshot.sh` после коммита сам делает push — всё, что в git, станет публичным. IP сервера из `docs/gaps.md` убран, `.claude/settings.local.json` добавлен в `.gitignore` (2026-11-06).
+- Git инициализирован 2026-11-06 (ветка `main`), `origin` = https://github.com/krutko77/bitrix24-customizer.git (**публичный**, пустой). Первый снимок `e222e68` отправлен в `origin/main` 2026-11-06. ⚠ `scripts/snapshot.sh` после коммита сам делает push — всё, что в git, станет публичным. IP сервера из `docs/gaps.md` убран, `.claude/settings.local.json` добавлен в `.gitignore` (2026-11-06).
 
 ## Следующие шаги
 1. Ответить на вопросы из `docs/gaps.md` (адрес портала, текущие настройки, нужные интеграции, кто создаёт вебхуки).

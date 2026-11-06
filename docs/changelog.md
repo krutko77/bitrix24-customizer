@@ -5,7 +5,7 @@
 ## 2026-11-06 — подключён GitHub-репозиторий
 
 - `git init -b main`, `origin` → https://github.com/krutko77/bitrix24-customizer.git (публичный, пустой; доступность проверена `git ls-remote`).
-- Коммиты и push не выполнялись.
+- Первый коммит `e222e68` (база знаний, скрипты, docs; 29 файлов) отправлен в `origin/main`.
 - Перед первым снимком: из `docs/gaps.md` убран IP сервера, `.claude/settings.local.json` добавлен в `.gitignore`.
 
 ## 2026-11-06 — удалены остатки FZ-87
