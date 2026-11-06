@@ -30,6 +30,8 @@
 - Запуск: `bizproc.workflow.start` — нужны `TEMPLATE_ID`, `DOCUMENT_ID` (например `['crm','CCrmDocumentLead','LEAD_1']`) и входные параметры шаблона.
 - Контроль: `bizproc.workflow.instances`, остановка `bizproc.workflow.terminate`/`kill`.
 - Шаблоны: `bizproc.workflow.template.add/update/delete/list` (администратор).
+- `bizproc.workflow.template.list` с `SELECT: ['TEMPLATE', ...]` возвращает дерево действий шаблона (`Type`, `Properties`, `Children`) — так можно прочитать логику БП. **Роботы на стадиях CRM он не возвращает** (проверено на портале ЕС Транс 2026-11-06, соответствует документации). В тексте шаблонов могут лежать секреты (URL исходящих вебхуков с ключом) — при выводе маскировать.
+- `bizproc.activity.list` и `bizproc.robot.list` через входящий вебхук → `ACCESS_DENIED: Application context required` (нужен контекст приложения); `event.get` → `WRONG_AUTH_TYPE`; `userfieldtype.list`, `placement.list` — `insufficient_scope` без соответствующего скоупа. Приложения, регистрирующие действия БП, видны косвенно: действия `rest_<хэш>` в шаблонах и типы полей `rest_<id>_<код>`.
 - Задания людям (согласование/ознакомление/ввод данных): `bizproc.task.*`.
 - Активный процесс использует **копию шаблона на момент старта** — правка шаблона не влияет на уже запущенные.
 - Туториалы: [tutorials/bizproc/](rest-docs/tutorials/bizproc/index.md) (кастомное действие, настройка робота, массовая остановка процессов).
